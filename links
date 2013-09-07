@@ -3,6 +3,17 @@ go to folder in terminal
 type
 node app.js
 
+
+to commit:
+git commit -am "your message"
+
+to add new files (dont forget this, i do a lot):
+git add your-file.html
+
+git push origin master
+git pull 
+
+
 for node:
 http://howtonode.org/hello-node
 http://net.tutsplus.com/tutorials/javascript-ajax/introduction-to-express/
