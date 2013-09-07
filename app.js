@@ -6,6 +6,7 @@ var express = require('express')
     , yPos = 0
 
 app.use(express.static('scripts'))
+app.use('/public', express.static(__dirname + '/public'))
 
 app.get('/', function(req, res){
     res.sendfile(__dirname + '/index.html')
