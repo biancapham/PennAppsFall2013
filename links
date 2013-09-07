@@ -10,8 +10,15 @@ git commit -am "your message"
 to add new files (dont forget this, i do a lot):
 git add your-file.html
 
+
+push and pull:
 git push origin master
 git pull 
+
+
+get status of commits:
+git status 
+
 
 
 for node:
