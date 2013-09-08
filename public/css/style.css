@@ -117,12 +117,12 @@ box-shadow: 2px 2px 15px rgba(0,0,0,1);
 	font-family: 'Pathway Gothic One', sans-serif;
 }
 
-.popup-with-formbutton {
+.popup-with-form.button {
 	font-weight: 500px;
 	font-family: helvetica;
 	width: 500px;
 	height: 50px;
-	background-color: #000BFF;
+	background-color: #808080;
 	opacity: 1.0;
 	text-align: center;
 	line-height: 50px;

@@ -45,7 +45,6 @@ $("#create").click(function() {
                 },  
                 success: function(flyer) {
                     createFlyer(flyer);
-            console.log(flyer)
                 } 
             }); 
     console.log("hello");
