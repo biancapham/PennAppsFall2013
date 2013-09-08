@@ -64,7 +64,7 @@
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
 		color: #181818;
-		font-family: sans-serif;
+		font-family: 'Lobster', cursive;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px; text-align: center;}
@@ -265,7 +265,7 @@
 
 /* #Misc
 ================================================== */
-	.remove-bottom { margin-bottom: 0 !important; }
+	.remove-bottom { font-size: 60px; margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
 
