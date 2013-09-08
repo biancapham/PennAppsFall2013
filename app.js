@@ -46,11 +46,14 @@ app.get('/flyers.json', function(req, res){
 	    });
 	});
 
+
 app.post("/create", function(req, res) {
-	res.body.title;
-	res.body.description;
-	res.body.img;
-	res.body.date;
+	var flyer = Flyer()
+        flyer.title = req.body.title
+	flyer.description = req.body.description;
+	flyer.img = req.body.img;
+	flyer.date = res.body.date;
+        flyer.save()
 	
 	//report.save( function(err, report) {
 	//if (err) return handleError(err);
