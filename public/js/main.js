@@ -33,7 +33,16 @@ $(document).ready(function(){
       width: 350,
       modal: true,
       buttons: {
-        "Add an Event": function() {
+        "Add a Flyer": function() {
+            $.ajax({  
+                type: "POST",  
+                url: "create",  
+                data: {title: $("#title").val(), image: $("#image").val(), 
+                date: $("#date").val(), description: $("#description").val()},  
+                success: function() {
+
+                } 
+            });  
         },
         Cancel: function() {
           $( this ).dialog( "close" );
