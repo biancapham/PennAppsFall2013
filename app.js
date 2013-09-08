@@ -69,14 +69,5 @@ app.post('/create', function(req, res){
 		}));
 	});
 	});
-	
-	
-	//report.save( function(err, report) {
-	//if (err) return handleError(err);
-	
-
 
 server.listen(3000);
-
-
-// start coding
