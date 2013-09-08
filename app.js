@@ -48,12 +48,15 @@ app.get('/flyers.json', function(req, res){
 
 
 app.post("/create", function(req, res) {
-	var flyer = Flyer()
+	var flyer = new Flyer();
         flyer.title = req.body.title
 	flyer.description = req.body.description;
-	flyer.img = req.body.img;
-	flyer.date = res.body.date;
-        flyer.save()
+	flyer.imgage = req.body.image;
+	flyer._date = req.body.date;
+        flyer.save(function(error, flyer){
+		res.send(flyer.toObject());
+		});
+	
 	
 	//report.save( function(err, report) {
 	//if (err) return handleError(err);
