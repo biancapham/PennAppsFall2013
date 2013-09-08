@@ -26,10 +26,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .events-grid ul {
-	text-align: center;
 }
 .events-grid li {
-	margin-right: 40px;
+	margin: 20px;
 	text-align: center;
 }
 

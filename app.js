@@ -58,10 +58,10 @@ app.post('/create', function(req, res){
 	console.log(req.body);
 	var flyer = new Flyer();
         flyer.name = req.body.name;
-	flyer.description = req.body.description;
-	flyer.image = req.body.image;
-	flyer.date = req.body.date;
-	//flyer._date = req.body.date;
+		flyer.description = req.body.description;
+		flyer.image = req.body.image;
+		flyer.date = req.body.date;
+		//flyer._date = req.body.date;
         flyer.save(function(error, flyer){
 		console.log(error);
 		res.send(flyer.toObject({

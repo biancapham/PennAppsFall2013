@@ -8,23 +8,28 @@ $.ajax({
 
         // for every flyer, add them to the page
         for (var i=0;i<data.flyers.length;i++) {
-
-            $("#events-grid-list").append(
-                '<li class="flip-container" ontouchstart="this.classList.toggle(\'hover\');"> \
-            <div class="flipper"> \
-                <div class="front" style="background-image: url(' + data.flyers[i].image +');"> \
-                </div> \
-                <div class="back">' +
-                    '<h2>' + data.flyers[i].name +'</h2>' +
-                    '<h2>' + data.flyers[i].date +'</h2>' +
-                    '<p>' + data.flyers[i].description +'</p>' +
-                '</div> \
-            </div> \
-        </li>');
+            createFlyer(data.flyers[i]);
 
         }
     }
 });
+
+function createFlyer(flyer) {
+        $("#events-grid-list").append(
+            '<li class="flip-container" ontouchstart="this.classList.toggle(\'hover\');"> \
+        <div class="flipper"> \
+            <div class="front" style="background-image: url(' + flyer.image +');"> \
+            </div> \
+            <div class="back">' +
+                '<h2>' + flyer.name +'</h2>' +
+                '<h2>' + flyer.date +'</h2>' +
+                '<p>' + flyer.description +'</p>' +
+            '</div> \
+        </div> \
+    </li>');
+
+}
+
 
 $(document).ready(function() {
 
@@ -32,9 +37,16 @@ $("#create").click(function() {
     $.ajax({  
                 type: "POST",  
                 url: "create",  
-                data: {title: $("#title").val(), image: $("#image").val(), 
-                date: $("#date").val(), description: $("#description").val()},  
-                success: function() {} 
+                data: {
+                    name: $("#name").val(), 
+                    image: $("#image").val(), 
+                    date: $("#date").val(), 
+                    description: $("#description").val()
+                },  
+                success: function(flyer) {
+                    createFlyer(flyer);
+            console.log(flyer)
+                } 
             }); 
     console.log("hello");
     $.magnificPopup.close();
