@@ -47,9 +47,6 @@
 		border-collapse: collapse;
 		border-spacing: 0; }
 
-	/* CSS for rollover image*/
-	ul li{ float:left; padding:7px; border:solid black 4px; margin:5px;}
-	ul li div{display:none; background:white; opacity:.9; position:absolute;}
 
 
 /* #Basic Styles
@@ -67,7 +64,7 @@
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
 		color: #181818;
-		font-family: fantasy;
+		font-family: sans-serif;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px; text-align: center;}
@@ -80,13 +77,6 @@
 
 	.events { text-align: center; }
 
-	.circletxt {
-		text-align: center;
-		margin-top: 200px;
-		margin-right: 100px;
-		font-family: fantasy;
-		font-weight: 700;
-	}
 
 	p { margin: 0 0 20px 0; }
 	p img { margin: 0; }
@@ -136,19 +126,6 @@
 	img.scale-with-grid {
 		max-width: 100%;
 		height: auto; }
-
-	.circleimage {
-		 display: block;
-   	 	width: 200px;
-    	height: 200px;
-    	background: #E6E7ED;
-    	-moz-border-radius: 100px;
-    	-webkit-border-radius: 100px;
-    	background-image: url(no.png);
-    	background-position:50% 50%;
-    	background-repeat:no-repeat; 
-	}	
-
 
 /* #Buttons
 ================================================== */

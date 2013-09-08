@@ -12,6 +12,16 @@ app.get('/', function(req, res){
     res.sendfile(__dirname + '/index.html')
 });
 
+// Static Route -- Change to real Data
+app.get('/api/flyers', function(req, res){
+    res.sendfile(__dirname + '/flyers.json')
+});
+
+
+// Static Route -- Change to real Data
+app.get('/api/add-flyer', function(req, res){
+});
+
 
 
 server.listen(3000);
