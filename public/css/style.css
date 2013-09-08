@@ -3,6 +3,7 @@
 @import "layout.css";
 @import "clearfix.css";
 @import "common.css";
+@import "magnific-popup.css";
 
 
 /*
@@ -74,15 +75,21 @@ box-shadow: 2px 2px 15px rgba(0,0,0,1);
 	font-family: helvetica;
 	width: 500px;
 	height: 50px;
-	background-color: #8F8FBD;
-	opacity: .6;
+	background-color: #000BFF;
+	opacity: 1.0;
 	text-align: center;
+	line-height: 50px;
 }
 .btn: hover {
-	background-color: #000BFF;
+	background-color: #8F8FBD;
 	opacity: .5
+	cursor: pointer;
 }
 
-#description {
-	background-size: 50px 50px;
+.validateTips {
+	font-size: 20px;
+}
+
+.footer {
+	margin-bottom: 100px;
 }

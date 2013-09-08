@@ -13,9 +13,11 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
 
         <!-- your javascript -->
         <script type="text/javascript" src="/public/js/main.js"></script>
+        <script src="/public/js/jquery.magnific-popup.min.js"></script> 
 </head>
 
 <body>
@@ -41,7 +43,9 @@
         </div>  
         <hr />
     <div class="events">
-        <button class = "btn" id = "add"> <strong> Add Event </strong> </button>
+        <!-- link that opens popup -->
+        <a class="popup-with-form button" href="#test-form">Add Event</a>
+
     </div>
 
 <div class="grid events-grid cf">
@@ -67,10 +71,8 @@
         </div>
     </div> 
 
-<div id="dialog-form" title="Add New Event">
-  <p class="validateTips">All form fields are required.</p>
- 
-  <form action="create" method="post"> 
+<!-- form itself -->
+  <form action="create" method="post" id="test-form" class="mfp-hide white-popup-block"> 
   <fieldset>
     <label for="image">Image Link</label>
     <input type="text" name="image" id="image" class="text ui-widget-content ui-corner-all" />    
@@ -79,11 +81,10 @@
     <label for="date">Date & Time</label>
     <input type="text" name="date" id="date" value="" class="text ui-widget-content ui-corner-all" />
     <label for="description">Description</label>
-    <input type="description" name="description" id="description" value="" class="text ui-widget-content ui-corner-all" />
+    <input type="text" name="description" id="description" value="" class="text ui-widget-content ui-corner-all" />
+    <button class="btn" id="create">create</button>
   </fieldset>
   </form>
-</div>
- 
 
 
 </body>

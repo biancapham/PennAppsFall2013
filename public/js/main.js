@@ -26,36 +26,36 @@ $.ajax({
     }
 });
 
-$(document).ready(function(){
-    $( "#dialog-form" ).hide().dialog({
-      autoOpen: false,
-      height: 300,
-      width: 350,
-      modal: true,
-      buttons: {
-        "Add a Flyer": function() {
-            $.ajax({  
+$(document).ready(function() {
+
+$("#create").click(function() {
+    $.ajax({  
                 type: "POST",  
                 url: "create",  
                 data: {title: $("#title").val(), image: $("#image").val(), 
                 date: $("#date").val(), description: $("#description").val()},  
-                success: function() {
+                success: function() {} 
+            }); 
+    console.log("hello");
+    $.magnificPopup.close();
+    return false;
+})
 
-                } 
-            });  
-        },
-        Cancel: function() {
-          $( this ).dialog( "close" );
+    $('.popup-with-form').magnificPopup({
+        type: 'inline',
+        preloader: false,
+        focus: '#name',
+
+        // When elemened is focused, some mobile browsers in some cases zoom in
+        // It looks not nice, so we disable it:
+        callbacks: {
+            beforeOpen: function() {
+                if($(window).width() < 700) {
+                    this.st.focus = false;
+                } else {
+                    this.st.focus = '#name';
+                }
+            }
         }
-      },
-      close: function() {
-        allFields.val( "" ).removeClass( "ui-state-error" );
-      }
     });
- 
-    $( "#add" )
-      .button()
-      .click(function() {
-        $( "#dialog-form" ).dialog( "open" );
-      });
-  });
+});
